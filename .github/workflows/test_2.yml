@@ -26,6 +26,7 @@ jobs:
         with:
           post-comment: true
           risk-level: 3
+          token: ${{ secrets.GITHUB_TOKEN }}
           verbose: true
           postfixes: |
             .
