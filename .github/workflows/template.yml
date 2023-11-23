@@ -6,6 +6,7 @@ on:
 
 jobs:
   starter:
+    steps:
       - name: Super Fast
         run: |
           echo "1"
