@@ -29,9 +29,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           verbose: true
           postfixes: |
-            .
+            sql
           directories: |
-            .
+            sql
       - name: Get output
         run: echo "Issues found in previous step"
         if: steps.sqlcheck.outputs.issue-found
