@@ -21,7 +21,7 @@ jobs:
           && sudo apt install gh -y
 
       - name: sqlcheck
-      - uses: yokawasa/action-sqlcheck@v1.4.0
+        uses: yokawasa/action-sqlcheck@v1.4.0
         id: sqlcheck
         with:
           post-comment: true
