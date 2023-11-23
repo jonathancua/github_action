@@ -1,0 +1,14 @@
+name: Test 3
+
+on:
+  push:
+    branches: [my_Test]
+
+jobs:
+  starter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Super Fast
+        run: |
+          echo "1" \
+          && echo "2"

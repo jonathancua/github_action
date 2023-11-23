@@ -1,0 +1,13 @@
+on:
+  push:
+    branches: [my_Test]
+
+jobs:
+  sql-review:
+    runs-on: ubuntu-latest
+    name: SQL Lint
+    steps:
+      - name: Check lint
+        uses: Bidaya0/sql-lint-in-action@v0.0.1
+        with:
+          path: '.'

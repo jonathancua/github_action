@@ -1,0 +1,16 @@
+on:
+  push:
+    branches: [my_Test]
+
+jobs:
+  sql-review:
+    runs-on: ubuntu-latest
+    name: SQL Review
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check SQL
+        uses: bytebase/sql-review-action@main
+        with:
+          override-file-path: ./sql-review-override.yml
+          database-type: "MYSQL"
+          file-pattern: sql/.*\.sql$

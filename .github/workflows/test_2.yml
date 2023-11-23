@@ -1,15 +1,12 @@
-name: Notify Foundation JVM when altering some tables
+name: Test 2
 
 on:
-  pull_request:
-    types: [opened]
-    branches:
-      - master
-    paths:
-      - 'db/features/*/main.xml'
+  push:
+    branches: [my_Test]
 
 jobs:
   check-sql:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -22,3 +19,19 @@ jobs:
           && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
           && sudo apt update \
           && sudo apt install gh -y
+
+      - name: sqlcheck
+        uses: yokawasa/action-sqlcheck@v1.4.0
+        id: sqlcheck
+        with:
+          post-comment: true
+          risk-level: 3
+          token: ${{ secrets.GITHUB_TOKEN }}
+          verbose: true
+          postfixes: |
+            sql
+          directories: |
+            sql
+      - name: Get output
+        run: echo "Issues found in previous step"
+        if: steps.sqlcheck.outputs.issue-found
