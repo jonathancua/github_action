@@ -1,4 +1,4 @@
-name: Github test 1
+name: Github test
 on: [push]
 jobs:
   test runner 1:
