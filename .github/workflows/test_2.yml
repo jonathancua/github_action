@@ -1,12 +1,9 @@
 name: Test 2
 
 on:
-  pull_request:
-    types: [opened]
+  push:
     branches:
-      - master
-    paths:
-      - 'db/features/*/main.xml'
+      - my_Test
 
 jobs:
   check-sql:
