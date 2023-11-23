@@ -1,7 +1,7 @@
 name: Github test
 on: [push]
 jobs:
-  test runner 1:
+  test-runner:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
