@@ -10,4 +10,4 @@ jobs:
       - name: Check lint
         uses: Bidaya0/sql-lint-in-action@v0.0.1
         with:
-          path: 'sql/.'
+          path: '.'
