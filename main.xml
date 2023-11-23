@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="changeset_1" author="author_1" context="lookup">
+        <comment>
+            commented
+        </comment>
+
+        <sql>
+            <![CDATA[
+            ALTER TABLE `Boo` ENGINE=INNODB;
+            ]]>
+        </sql>
+
+        <rollback>
+            <![CDATA[
+                ALTER TABLE `Boo` DROP COLUMN `id`;
+            ]]>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="test-1" author="nice_author">
+        <tagDatabase tag="test-1"/>
+    </changeSet>
+
+</databaseChangeLog>
