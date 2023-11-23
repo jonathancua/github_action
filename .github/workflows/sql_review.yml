@@ -10,3 +10,4 @@ jobs:
         uses: bytebase/sql-review-action@main
         with:
           database-type: "MYSQL"
+          file-pattern: ^sql/.*\.sql$
