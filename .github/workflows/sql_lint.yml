@@ -5,8 +5,9 @@ on:
 jobs:
   sql-review:
     runs-on: ubuntu-latest
-    name: SQL Review
+    name: SQL Lint
     steps:
-      uses: Bidaya0/sql-lint-in-action@v0.0.1
-      with:
-        path: 'sql/'
+      - name: Check lint
+        uses: Bidaya0/sql-lint-in-action@v0.0.1
+        with:
+          path: 'sql/'
