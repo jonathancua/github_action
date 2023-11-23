@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Super Fast
         run: |
-          echo "1"
+          echo "1" \
           && echo "2"
