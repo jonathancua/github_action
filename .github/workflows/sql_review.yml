@@ -13,4 +13,4 @@ jobs:
         with:
           override-file-path: ./sql-review-override.yml
           database-type: "MYSQL"
-          file-pattern: ^sql/.*\.sql$
+          file-pattern: sql/.*\.sql$
