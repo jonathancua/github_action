@@ -2,8 +2,7 @@ name: Test 2
 
 on:
   push:
-    branches:
-      - my_Test
+    branches: [my_Test]
 
 jobs:
   check-sql:
