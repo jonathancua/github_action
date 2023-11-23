@@ -1,6 +1,6 @@
 on:
   push:
-    branch: [my_Test]
+    branches: [my_Test]
 
 jobs:
   sql-review:
