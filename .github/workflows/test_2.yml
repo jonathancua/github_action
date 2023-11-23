@@ -1,4 +1,4 @@
-name: Notify Foundation JVM when altering some tables
+name: Test 2
 
 on:
   pull_request:
