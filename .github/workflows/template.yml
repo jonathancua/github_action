@@ -6,6 +6,7 @@ on:
 
 jobs:
   starter:
+    runs-on: ubuntu-latest
     steps:
       - name: Super Fast
         run: |
