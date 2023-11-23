@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  sql-review:
+    runs-on: ubuntu-latest
+    name: SQL Review
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check SQL
+        uses: bytebase/sql-review-action@main
+        with:
+          database-type: "MYSQL"
